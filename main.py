@@ -20,6 +20,10 @@ def read_root():
 def hello():
     return {"message": "Hello from the backend API!"}
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.get("/test")
 def test_database():
     """Test endpoint to check if database is available and accessible"""
